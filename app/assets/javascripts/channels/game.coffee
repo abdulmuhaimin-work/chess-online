@@ -15,7 +15,9 @@ App.game = App.cable.subscriptions.create "GameChannel",
           from: source
           to: target
           promotion: "q"
+          # @printMessage("#{source}-->#{target}")
         App.board.position(App.chess.fen())
+
       when "opponent_forfeits"
         @printMessage("Opponent forfeits. You win!")
 
