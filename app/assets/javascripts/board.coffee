@@ -20,11 +20,14 @@ $ ->
         to: target
         promotion: "q"
 
+
       if (move == null)
         # illegal move
         return "snapback"
       else
         App.game.perform("make_move", move)
         App.board.position(App.chess.fen(), false)
+        $("#messages").append("<p>#{source}-->#{target}</p>")
+
 
   App.board = ChessBoard("chessboard", cfg)
