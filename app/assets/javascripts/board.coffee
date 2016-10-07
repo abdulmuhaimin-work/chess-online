@@ -8,7 +8,7 @@ $ ->
 
     onDragStart: (source, piece, position, orientation) =>
       # make sure the player is allowed to pick up the piece
-      return !(App.chess.game_over() ||
+      return !(App.chess.game_over()||
                (App.chess.turn() == "w" && piece.search(/^b/) != -1) ||
                (App.chess.turn() == "b" && piece.search(/^w/) != -1) ||
                (orientation == "white" && piece.search(/^b/) != -1) ||

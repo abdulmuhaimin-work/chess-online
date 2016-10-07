@@ -18,6 +18,9 @@ App.game = App.cable.subscriptions.create "GameChannel",
           @printMessage("#{source}-->#{target}")
         App.board.position(App.chess.fen())
 
+        if App.chess.in_check()
+          alert("check")
+
       when "opponent_forfeits"
         @printMessage("Opponent forfeits. You win!")
 
