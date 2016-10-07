@@ -6,6 +6,8 @@ $ ->
     pieceTheme: "assets/chesspieces/alpha/{piece}.png"
     showNotation: false
 
+
+
     onDragStart: (source, piece, position, orientation) =>
       # make sure the player is allowed to pick up the piece
       return !(App.chess.game_over()||
