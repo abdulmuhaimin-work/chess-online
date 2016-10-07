@@ -29,6 +29,9 @@ gem 'redis', '~> 3.0'
 gem 'bootstrap-sass'
 gem 'font-awesome-rails'
 gem 'chessboard'
+gem 'frontend-generators'
+gem 'bootstrap'
+
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 

@@ -42,6 +42,9 @@ GEM
     autoprefixer-rails (6.4.0.2)
       execjs
     bcrypt (3.1.11)
+    bootstrap (4.0.0.alpha4)
+      autoprefixer-rails (>= 6.0.3)
+      sass (>= 3.4.19)
     bootstrap-sass (3.3.7)
       autoprefixer-rails (>= 5.2.1)
       sass (>= 3.3.4)
@@ -68,6 +71,9 @@ GEM
     ffi (1.9.14)
     font-awesome-rails (4.6.3.1)
       railties (>= 3.2, < 5.1)
+    frontend-generators (0.1.1)
+      rainbow (= 2.0.0)
+      turf (= 0.0.5)
     globalid (0.3.7)
       activesupport (>= 4.1.0)
     i18n (0.7.0)
@@ -126,6 +132,7 @@ GEM
       method_source
       rake (>= 0.8.7)
       thor (>= 0.18.1, < 2.0)
+    rainbow (2.0.0)
     rake (11.3.0)
     rb-fsevent (0.9.7)
     rb-inotify (0.9.7)
@@ -157,6 +164,7 @@ GEM
     turbolinks (5.0.1)
       turbolinks-source (~> 5)
     turbolinks-source (5.0.0)
+    turf (0.0.5)
     tzinfo (1.2.2)
       thread_safe (~> 0.1)
     uglifier (3.0.2)
@@ -176,12 +184,14 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  bootstrap
   bootstrap-sass
   byebug
   chessboard
   coffee-rails (~> 4.2)
   devise
   font-awesome-rails
+  frontend-generators
   jbuilder (~> 2.5)
   jquery-rails
   listen (~> 3.0.5)
@@ -198,4 +208,4 @@ DEPENDENCIES
   web-console
 
 BUNDLED WITH
-   1.12.5
+   1.13.2

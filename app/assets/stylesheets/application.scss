@@ -12,10 +12,10 @@
  *
  *= require_tree .
  *= require_self
+ *= require font-awesome
  *= require chessboard-0.3.0.min
  *= require chessboard.min
  */
  @import "bootstrap-sprockets";
  @import "bootstrap";
  @import "font-awesome";
- @import url(https://fonts.googleapis.com/css?family=Montserrat);
