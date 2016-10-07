@@ -9,16 +9,20 @@ App.game = App.cable.subscriptions.create "GameChannel",
         App.board.position("start")
         App.board.orientation(data.msg)
         @printMessage("Game started! You play as #{data.msg}.")
+
       when "make_move"
         [source, target] = data.msg.split("-")
         App.chess.move
           from: source
           to: target
           promotion: "q"
-          @printMessage("#{source}-->#{target}")
+        @printMessage("#{source}-->#{target}")
         App.board.position(App.chess.fen())
 
-        if App.chess.in_check()
+        if App.chess.in_checkmate()
+          alert("Game over, checkmate")
+
+        else if App.chess.in_check()
           alert("check")
 
       when "opponent_forfeits"

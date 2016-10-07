@@ -15,6 +15,7 @@ $ ->
                (orientation == "black" && piece.search(/^w/) != -1))
 
     onDrop: (source, target) =>
+
       move = App.chess.move
         from: source
         to: target
@@ -23,11 +24,16 @@ $ ->
 
       if (move == null)
         # illegal move
+
+        alert("invalid move")
         return "snapback"
+
+
       else
         App.game.perform("make_move", move)
         App.board.position(App.chess.fen(), false)
-        $("#messages").append("<p>#{source}-->#{target}</p>")
+
+        $("#messages").append("#{source}-->#{target}")
 
 
   App.board = ChessBoard("chessboard", cfg)

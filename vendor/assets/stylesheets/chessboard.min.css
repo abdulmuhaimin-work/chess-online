@@ -53,3 +53,23 @@
     top: 2px;
     left: 2px
 }
+
+
+#chessboard {
+    left: 35%;
+    width: 30%;
+    height: 30%;
+    top: 20%;
+    position: absolute;
+    text-align: center;
+}
+
+
+#board {
+    left: 35%;
+    width: 30%;
+    height: 30%;
+    top: 20%;
+    position: absolute;
+    text-align: center;
+}
