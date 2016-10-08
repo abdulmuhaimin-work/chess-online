@@ -107,7 +107,7 @@ var updateStatus = function() {
   // checkmate?
   if (game.in_checkmate() === true) {
     status = 'Game over, ' + moveColor + ' is in checkmate.';
-    alert("Checkmate. Game over, u fu**ing dimwit")
+    alert("Checkmate. Game over. U r so bad even my cat can win against you")
   }
 
   // draw?
