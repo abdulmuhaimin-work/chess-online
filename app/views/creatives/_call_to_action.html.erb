@@ -2,7 +2,11 @@
     <div class="container text-center">
         <div class="call-to-action">
             <h2>Free Game Test</h2>
-            <a href="/welcome" class="btn btn-default btn-xl wow tada">Vs Player</a>
+            <% if user_signed_in? %>
+              <a href="/welcome" class="btn btn-default btn-xl wow tada">Vs Player</a>
+            <% else %>
+              <a href="/users/sign_in" class="btn btn-default btn-xl wow tada">Vs Player</a>
+            <% end %>
             <a href="/chessboard" class="btn btn-default btn-xl wow tada">Vs Computer</a>
         </div>
     </div>

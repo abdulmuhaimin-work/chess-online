@@ -1,8 +1,9 @@
 <%= javascript_include_tag 'index', 'data-turbolinks-track' => true %>
-<div id="chessboard" style="width: 400px"></div>
-<%= link_to "Upvote", upvote_path, method: :post %>
-        <span> / </span>
-<%= link_to "Downvote", downvote_path, method: :post %>
-<span> / </span>
+<%= render 'partials/navbargames' %>
 
+<div id="chessboard" style="width: 400px"></div>
+</br>
+</br>
+</br>
+</br>
 <div id="messages"></div>

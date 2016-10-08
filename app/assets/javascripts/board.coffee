@@ -1,12 +1,22 @@
 $ ->
   App.chess = new Chess()
 
+
+  greySquare: (square) =>
+    squareEl = $('#board .square-' + square)
+    background = '#a9a9a9'
+    if squareEl.hasClass('black-3c85d') == true
+      background = '#696969'
+    squareEl.css 'background', background
+    return
+  removeGreySquares: =>
+    $('#board .square-55d63').css 'background', ''
+    return
+
   cfg =
     draggable: true
     pieceTheme: "assets/chesspieces/alpha/{piece}.png"
     showNotation: false
-
-
 
     onDragStart: (source, piece, position, orientation) =>
       # make sure the player is allowed to pick up the piece
